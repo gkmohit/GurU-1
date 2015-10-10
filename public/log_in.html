@@ -4,9 +4,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="master.scss">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
 	<script type='text/javascript' src='script.js'></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -50,10 +50,6 @@
 				<div class = "signup_container">
 					<div class = "col-xs-10 col-xs-offset-1">
 						<form id = "signUpForm">
-						  <div class="form-group">
-						    <label for="full_name">Full Name</label>
-						    <input type="text" class="form-control" id="full_name" placeholder="Full Name">
-						  </div>
 						  <br>
 						  <div class="form-group">
 						    <label for="email">Email address</label>
@@ -65,13 +61,12 @@
 						    <input type="password" class="form-control" id="password" placeholder="Password">
 						  </div>
 						  <br>
-						  <div class="form-group">
-						    <label for="phone_number">Phone Number*</label>
-						    <input type="text" class="form-control" id="phone_number" placeholder="Phone Number (5555555555)">
-						  </div>
-						  <p>Messaging rates may apply</p>
+						  <button class="btn btn-success btn-lg" id = "submit">LOG IN</button>
 						  <br>
-						  <button class="btn btn-success btn-lg" id = "submit">Submit</button>
+						  <br>
+						  <a href = "#">Forgot your password?</a>
+						  <br>
+						  <p>Not a Member? <a href = "sign_up.html">Sign Up</a></p>
 						  
 						</form>
 						<div class = "invalidEmailWarning">Invalid Email</div>
@@ -138,7 +133,7 @@
 				if (regex.test(payload.email) && payload.full_name && payload.password && payload.phone_number) {
 					$.ajax({
 						method: "POST",
-	  					url: "/sign_up",
+	  					url: "/log_in",
 	  					contentType: "application/json",
 	  					data: JSON.stringify(payload),
 	  					success: function(data) {

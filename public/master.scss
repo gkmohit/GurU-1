@@ -41,12 +41,16 @@ body > .container { height: auto; min-height: 100%; }
 
 /* Set the fixed height of the footer here */
 #footer {
-  height: 120px;
+  height: 140px;
   background-color: #1a1a1a;
   color: white;
-
+  overflow: auto;
 }
 
+#footer h3 {
+  font-weight: 300;
+  letter-spacing: 8;
+}
 
 .navbar {
    background-color: transparent;
@@ -55,6 +59,7 @@ body > .container { height: auto; min-height: 100%; }
    font-weight: 400;
    letter-spacing: 3;
    color: white;
+   height: 50px;
 }
 .navbar-default {
    background-color: transparent;
@@ -65,6 +70,15 @@ body > .container { height: auto; min-height: 100%; }
    color: white;
 }
 
+.navbar-default .navbar-nav>li>a {
+  color: white;
+  font-weight: 200;
+  letter-space: 10;
+}
+.navbar-default .navbar-nav>li>a:hover {
+  color: #337AB7;
+}
+
 .clr {
   clear: both;
 }
@@ -73,7 +87,7 @@ body > .container { height: auto; min-height: 100%; }
 
 #maincontent {
   background-color: transparent;
-  min-height: 600px;
+  min-height: 500px;
 }
 
 #subcontent {
@@ -93,9 +107,11 @@ body > .container { height: auto; min-height: 100%; }
 }
 
 .signup h1 {
-  font-weight: 100;
-  letter-spacing: 8;
-  text-shadow: 5px 5px 10px #1a1a1a;
+  font-weight: 200;
+  text-shadow: 1px 2px 6px #1a1a1a;
+  margin-top:0px;
+  margin-bottom: 0px;
+  font-size: 50px;
 }
 
 #maincontent > div > button { 
@@ -118,3 +134,67 @@ body > .container { height: auto; min-height: 100%; }
   background-color: yellow;
 }
 
+
+#signup_form {
+  background-color: rgba(0,0,0,0.8);
+  min-height: 700px;
+}
+
+.form-group {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.signup_container {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 200;
+}
+
+.invalidEmailWarning {
+  display: none;
+  width: 100%;
+  background-color: rgba(245, 64, 64, 0.4);
+  height: 20px;
+  clear: both;
+  margin: 5px;
+}
+
+.emptyFieldWarning {
+  display: none;
+  width: 100%;
+  background-color: rgba(245, 64, 64, 0.4);
+  height: 20px;
+  clear: both;
+  margin: 5px;
+}
+
+.glyphicon {
+  font-size: 120px;
+  right: 40%;
+  position: absolute;
+  margin-bottom: 50px;
+}
+
+.glyphicon.glyphicon-apple {
+  font-size: 130px;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+p {
+  font-weight: 300;
+}
+.small {
+  font-family: 'Pacifico';
+}
+
+.icon_container {
+  font-size: 50px;
+}
