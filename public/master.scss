@@ -1,0 +1,104 @@
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background: url("images/hero.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html, body, .container { height: 100%; }
+body > .container { height: auto; min-height: 100%; }
+
+.container-fluid {
+  padding: 0;
+}
+
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -140px;
+  /* Pad bottom by footer height */
+  padding: 0 0 120px;
+
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 120px;
+  background-color: #1a1a1a;
+  color: white;
+
+}
+
+
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+   font-weight: 400;
+   letter-spacing: 3;
+}
+.navbar-default {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+   font-weight: 400;
+   letter-spacing: 3;
+}
+
+.clr {
+  clear: both;
+}
+
+.navbar li { color: #000 } 
+
+#maincontent {
+  background-color: transparent;
+  min-height: 600px;
+}
+
+#subcontent {
+  background-color: white;
+  min-height: 600px;
+  width: 100%;
+}
+
+.signup {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 200;
+
+}
+
+.signup h1 {
+  font-weight: 100;
+  letter-spacing: 8;
+}
+
+.btn {
+  font-weight: 300;
+  letter-spacing: 4;
+}
+
+.circle {
+  left: 40%;
+  position: relative;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px; 
+  margin: 35px;
+  /* width and height can be anything, as long as they're equal */
+  background-color: yellow;
+}
+
