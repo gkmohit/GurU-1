@@ -133,11 +133,11 @@
 				if (regex.test(payload.email) && payload.full_name && payload.password && payload.phone_number) {
 					$.ajax({
 						method: "POST",
-	  					url: "/log_in",
+	  					url: "/login",
 	  					contentType: "application/json",
 	  					data: JSON.stringify(payload),
 	  					success: function(data) {
-			              window.location = "index.html";
+			              window.location = "dashboard.html";
 			        	}
 					});
 				} else if (regex.test(payload.email)) {

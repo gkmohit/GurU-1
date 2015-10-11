@@ -4,14 +4,6 @@ var express = require("express");
 var Router = require("./lib/Router");
 var app = express();
 var inin = require('inin');
-var username = "jhorwitz@live.unc.edu";
-var password = "Unicorns1+";
-
-inin.login(username, password).then(function(sessionData) {
-    console.log(sessionData);
-}).catch(function(err) {
-    console.log('Oh noes!', err);
-});
 
 var router = new Router();
 app.use("/", router.router);

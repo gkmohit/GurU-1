@@ -70,6 +70,10 @@ body > .container { height: auto; min-height: 100%; }
    color: white;
 }
 
+.navbar-brand>img{
+  margin-left: 50px;
+}
+
 .navbar-default .navbar-nav>li>a {
   color: white;
   font-weight: 200;
@@ -97,8 +101,8 @@ body > .container { height: auto; min-height: 100%; }
 }
 
 .signup {
-  position: absolute;
-  top: 45%;
+  position: relative;
+  top: 200px;
   width: 100%;
   text-align: center;
   color: white;
@@ -138,6 +142,7 @@ body > .container { height: auto; min-height: 100%; }
 #signup_form {
   background-color: rgba(0,0,0,0.8);
   min-height: 700px;
+  height: 100%;
 }
 
 .form-group {
