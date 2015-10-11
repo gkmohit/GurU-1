@@ -107,7 +107,7 @@
 
 		$("document").ready(function (){
 
-			$('#submit').click(function (){
+			$("#submit").click(function (){
 				var payload = {
 					email : $("#email").val(),
           			password : $("#password").val()
@@ -119,11 +119,13 @@
 					$.ajax({
 						type: "POST",
 						contentType: "application/json",
-						dataType: "json",
 						url: "/login",
 						data: JSON.stringify(payload),
 						success: function( data ){
-							alert('Success');
+							alert("Success");
+						},
+						error: function( err ){
+							alert("Failure");
 						}
 					});
 
