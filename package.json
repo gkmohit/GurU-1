@@ -2,6 +2,7 @@
   "name": "GurU",
   "description": "HackNC Project",
   "private": "true",
+  "engine": "node 4.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/jhorwitz828/GurU.git"
