@@ -120,7 +120,11 @@
 						url: "/login",
 						data: JSON.stringify(payload),
 						success: function( data ){
-							location.href = "dashboard.html";
+							if (payload.email == "jhorwitz@live.unc.edu") {
+								location.href = "dashboard.html";
+							} else {
+								location.href = "dashboard_mentee_welcomeback.html";
+							}
 						}
 
 					});

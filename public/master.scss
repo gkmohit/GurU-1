@@ -100,7 +100,7 @@ body > .container { height: auto; min-height: 100%; }
 }
 
 #subcontent {
-  background-color: #606060;
+  background-color: #4C4C4C;
   min-height: 600px;
   width: 100%;
 }
@@ -204,7 +204,7 @@ body > .container { height: auto; min-height: 100%; }
   right: 40%;
   position: absolute;
   margin-bottom: 50px;
-  color:white;
+  color: #E26014;
 }
 
 .glyphicon.glyphicon-apple {
@@ -246,4 +246,12 @@ p {
 
 .mentee {
   background-image: url("images/christina.jpg");
+}
+
+.panel-default>.panel-heading {
+    color: white;
+    background-color: #1A1A1A;
+    border-color: #ddd;
+    font-weight: 800;
+    letter-spacing: 3;
 }

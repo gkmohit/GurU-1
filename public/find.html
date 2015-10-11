@@ -8,6 +8,9 @@
 	<script type='text/javascript' src='script.js'></script>
 	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="jquery-ui.js"></script>
+    <link type="text/css" href="jquery.ui.chatbox.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery.ui.chatbox.js"></script>
 
 </head>
 
@@ -35,7 +38,7 @@
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav navbar-right">
 			        <li><a href="about.html">ABOUT</a></li>
-			        <li><a href="dashboard.html">DASHBOARD</a></li>
+			        <li><a href="dashboard_mentee.html">DASHBOARD</a></li>
 			        <li><a href="index.html">LOG OUT</a></li>
 			      </ul>
 			    </div><!-- /.navbar-collapse -->
@@ -55,9 +58,11 @@
 					</div>
 
 					<div class = "col-xs-8">
-						<h1>Zachary White</h1>
+						<h1>Zachary White<span class = "pull-right" style ="font-size: 18px;">$36/hr</span></h1>
 						<p>Zachary is a results-driven young professional with a track record of success leading teams through professional projects and competition-based lean start-ins at Intuit Inc. and Rochester Institute of Technology. He has demonstrated exceptional ability to manage teams in high stress situations, while maintaining a "cool, calm and collected" attitude.</p>
-						<a href = "#" class="btn btn-success">Contact</a>
+						<a href = "mailto:contact@guru.com?Subject=Mentor Session" class="btn btn-success"><i class="fa fa-envelope"></i> Send Email</a>
+
+						<input type="button" name="toggle" value = "Message" class = "btn btn-info" style="margin-left:30px;"></input>
 
 					</div>
 				</div>
@@ -69,9 +74,11 @@
 					</div>
 
 					<div class = "col-xs-8">
-						<h1>Joshua Horwitz</h1>
+						<h1>Joshua Horwitz<span class = "pull-right" style ="font-size: 18px;">$25/hr</span></h1>
 						<p>I worked with the incubation and cloud services teams to develop software using the Bandwidth API. I worked primarily with Node.js on various projects including Web Apps involving SMS and Call services and building and improving our Node.js SDK.</p>
-						<a href = "#" class="btn btn-success">Contact</a>
+						<a href = "mailto:contact@guru.com?Subject=Mentor Session" class="btn btn-success"><i class="fa fa-envelope"></i> Send Email</a>
+
+						<input type="button" name="toggle" value = "Message" class = "btn btn-info" style="margin-left:30px;"></input>
 					</div>
 				</div>
 				<hr style="border-color:grey;">
@@ -82,9 +89,12 @@
 					</div>
 
 					<div class = "col-xs-8">
-						<h1>Mohit Kishore</h1>
+						<h1>Mohit Kishore<span class = "pull-right" style ="font-size: 18px;">$13/hr</span></h1>
 						<p>I am a keen and a very enthusiastic person. I always like to learn about new technology. I like learning about the histories of different places. I am currently pursuing a degree in Computer Science at York University, Toronto, Canada. In the past two years of my career, I have not only gained experience with customer service but I have also gained experience with servers and software development.</p>
-						<a href = "#" class="btn btn-success">Contact</a>
+						<a href = "mailto:contact@guru.com?Subject=Mentor Session" class="btn btn-success"><i class="fa fa-envelope"></i> Send Email</a>
+
+						<input type="button" name="toggle" value = "Message" class = "btn btn-info" style="margin-left:30px;"></input>
+
 					</div>
 				</div>
 				<hr style="border-color:grey;">
@@ -95,14 +105,22 @@
 					</div>
 
 					<div class = "col-xs-8">
-						<h1>Takehiro Mouri</h1>
+						<h1>Takehiro Mouri<span class = "pull-right" style ="font-size: 18px;">$16/hr</span></h1>
 						<p>I have always had a passion for technology, constantly writing simple games and building websites since I was in elementary school. I have also given a TED talk in 2014 in Tokyo about using technology in education. Wanting to dive deeper into technology, I naturally gravitated towards coding and web development. I enrolled in a 3 month full-time web development boot camp while gradually shutting down the translation business I had built in Japan. I absolutely fell in love with the art of programming, and have decided to pursue web development as a career.</p>
-						<a href = "#" class="btn btn-success">Contact</a>
+						<a href = "mailto:contact@guru.com?Subject=Mentor Session" class="btn btn-success"><i class="fa fa-envelope"></i> Send Email</a>
+
+						<input type="button" name="toggle" value = "Message" class = "btn btn-info" style="margin-left:30px;"></input>
 					</div>
 				</div>
 				<hr style="border-color:grey;">
 				<p class = "text-center">1 / 1</p>
 				<a href="dashboard_mentee.html" class = "pull-right">Back to Dashboard</a>
+								
+								
+								<!--Chat box will be generated in this container-->
+								<div id="chat_div"></div>
+
+							
 			</div>
 		</div>
 		
@@ -127,6 +145,79 @@
 		</div>
 	</div> 
 </div>
+
+    <script type="text/javascript">
+		/*
+			document ready.
+		*/
+		$(document).ready(function()
+		{
+			/*
+				declare gloabl box variable,
+				so we can check if box is alreay open,
+				when user click toggle button
+			*/
+			var box = null;
+			
+			/*
+				we are now adding click hanlder for 
+				toggle button.
+			*/
+			
+			$("input[type='button']").click(function(event, ui)
+			{
+				/*
+					now if box is not null,
+					we are toggling chat box.
+				*/
+				if(box)
+				{
+					/*
+						below code will hide the chatbox that 
+						is active, when first clicked on toggle button
+					*/
+					box.chatbox("option", "boxManager").toggleBox();
+				}
+				else
+				{
+					/*
+						if box variable is null then we will create
+						chat-box.
+					*/
+					box = $("#chat_div").chatbox(
+					{
+						/*
+							unique id for chat box
+						*/
+						id:"You",
+                        user:
+						{
+							key : "value"
+						},
+						/*
+							Title for the chat box
+						*/
+						title : "  Guru Chat",
+						/*
+							messageSend as name suggest,
+							this will called when message sent.
+							and for demo we have appended sent message to our log div.
+						*/
+						messageSent : function(id, user, msg)
+						{
+                            $("#chat_div").chatbox("option", "boxManager").addMsg(id, msg);
+							setTimeout(
+	  							function() 
+	  							{
+	   							 $("#chat_div").chatbox("option", "boxManager").addMsg("Guru", "The Guru is currently not available. Please allow up to an hour response time as Gurus are busy consulting with current students.");
+	  							}, 2000);
+                            
+                        }
+					});
+				}
+			});
+		});
+    </script>
 
 </body>
 

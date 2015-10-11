@@ -8,6 +8,9 @@
 	<script type='text/javascript' src='script.js'></script>
 	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="jquery-ui.js"></script>
+    <link type="text/css" href="jquery.ui.chatbox.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery.ui.chatbox.js"></script>
 
 </head>
 
@@ -58,7 +61,9 @@
 						<h1>Christina Timberland</h1>
 						<p>Member Since: August 15, 2015</p>
 						<p>Total mentor sessions: 15</p>
-						<a href = "#" class="btn btn-success btn-sm pull-right">CONTACT</a>
+						<a href = "mailto:contact@guru.com?Subject=Mentor Session" class="btn btn-success"><i class="fa fa-envelope"></i> Send Email</a>
+
+						<input type="button" name="toggle" value = "Message" class = "btn btn-info" style="margin-left:30px;"></input>
 
 					</div>
 
@@ -67,6 +72,9 @@
 				
 				<p class = "text-center">1 / 1</p>
 				<a href="dashboard.html" class = "pull-right">Back to Dashboard</a>
+				<div id="chat_div"></div>
+
+				
 			</div>
 		</div>
 		
@@ -91,6 +99,80 @@
 		</div>
 	</div> 
 </div>
+
+<script type="text/javascript">
+		/*
+			document ready.
+		*/
+		$(document).ready(function()
+		{
+			/*
+				declare gloabl box variable,
+				so we can check if box is alreay open,
+				when user click toggle button
+			*/
+			var box = null;
+			
+			/*
+				we are now adding click hanlder for 
+				toggle button.
+			*/
+			
+			$("input[type='button']").click(function(event, ui)
+			{
+				/*
+					now if box is not null,
+					we are toggling chat box.
+				*/
+				if(box)
+				{
+					/*
+						below code will hide the chatbox that 
+						is active, when first clicked on toggle button
+					*/
+					box.chatbox("option", "boxManager").toggleBox();
+				}
+				else
+				{
+					/*
+						if box variable is null then we will create
+						chat-box.
+					*/
+					box = $("#chat_div").chatbox(
+					{
+						/*
+							unique id for chat box
+						*/
+						id:"You",
+                        user:
+						{
+							key : "value"
+						},
+						/*
+							Title for the chat box
+						*/
+						title : "  Guru Chat",
+						/*
+							messageSend as name suggest,
+							this will called when message sent.
+							and for demo we have appended sent message to our log div.
+						*/
+						messageSent : function(id, user, msg)
+						{
+                            $("#chat_div").chatbox("option", "boxManager").addMsg(id, msg);
+							setTimeout(
+	  							function() 
+	  							{
+	   							 $("#chat_div").chatbox("option", "boxManager").addMsg("Guru Robot", "Mentee currently unavailable.");
+	  							}, 2000);
+                            
+                        }
+					});
+				}
+			});
+		});
+    </script>
+
 
 </body>
 
