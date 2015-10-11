@@ -113,9 +113,7 @@
           			password : $("#password").val()
 				};
 				var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-				console.log(payload);
 				if (regex.test(payload.email) && payload.password ) {
-					alert("Hi");
 					$.ajax({
 						type: "POST",
 						contentType: "application/json",
