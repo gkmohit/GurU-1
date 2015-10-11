@@ -2,7 +2,6 @@
   "name": "GurU",
   "description": "HackNC Project",
   "private": "true",
-  "engine": "node 4.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/jhorwitz828/GurU.git"
@@ -11,8 +10,7 @@
     "body-parser": "^1.13.1",
     "express": "^4.12.4",
     "inin": "^0.1.0",
-    "util": "^0.10.3",
-    "ibm_db": "^0.0.16"
+    "util": "^0.10.3"
   },
   "devDependencies": {
     "jscs": "^1.13.1",
