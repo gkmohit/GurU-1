@@ -4,7 +4,7 @@ body {
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  background: url("images/bg2.jpg") no-repeat center center fixed; 
+  background: url("images/bg2.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -92,7 +92,7 @@ body > .container { height: auto; min-height: 100%; }
   clear: both;
 }
 
-.navbar li { color: #000 } 
+.navbar li { color: #000 }
 
 #maincontent {
   background-color: transparent;
@@ -117,7 +117,7 @@ body > .container { height: auto; min-height: 100%; }
   background-color: rgba(0,0,0,0.8);
   min-height: 800px;
   height: 100%;
-  
+
 }
 
 .signup {
@@ -138,7 +138,7 @@ body > .container { height: auto; min-height: 100%; }
   font-size: 50px;
 }
 
-#maincontent > div > button { 
+#maincontent > div > button {
   box-shadow: 5px 4px 20px #1a1a1a;
 }
 
@@ -149,15 +149,15 @@ body > .container { height: auto; min-height: 100%; }
 
 .circle {
   margin: 0 auto;
-  width: 250px; 
+  width: 250px;
   height: 250px;
   border-radius: 50%;
-  background-repeat: no-repeat; 
-  background-position: center center; 
+  background-repeat: no-repeat;
+  background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; 
+  background-size: cover;
 }
 
 

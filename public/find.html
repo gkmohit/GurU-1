@@ -47,7 +47,7 @@
 
 
 
-		<div id = "dashboard">
+		<div id = "dashboard" style = "height:auto;">
 			<br>
 			<h1 class="text-center" style="color:white;font-weight:500;letter-spacing:8;">FIND A MENTOR</h1>
 			<div class = "well" style = "height:1200px; width:80%; margin:0 auto;">
@@ -115,24 +115,24 @@
 				<hr style="border-color:grey;">
 				<p class = "text-center">1 / 1</p>
 				<a href="dashboard_mentee.html" class = "pull-right">Back to Dashboard</a>
-								
-								
+
+
 								<!--Chat box will be generated in this container-->
 								<div id="chat_div"></div>
 
-							
+
 			</div>
 		</div>
-		
 
-		
+
+
 	</div>
 </div>
 
 <br class = "clr" />
 
-<div id="footer"> 
-	<div class="container"> 
+<div id="footer">
+	<div class="container">
 
 			<div class = "text-center">
 				<h3>FOLLOW US</h1>
@@ -143,7 +143,7 @@
 				</div>
 			</div>
 		</div>
-	</div> 
+	</div>
 </div>
 
     <script type="text/javascript">
@@ -158,12 +158,12 @@
 				when user click toggle button
 			*/
 			var box = null;
-			
+
 			/*
-				we are now adding click hanlder for 
+				we are now adding click hanlder for
 				toggle button.
 			*/
-			
+
 			$("input[type='button']").click(function(event, ui)
 			{
 				/*
@@ -173,7 +173,7 @@
 				if(box)
 				{
 					/*
-						below code will hide the chatbox that 
+						below code will hide the chatbox that
 						is active, when first clicked on toggle button
 					*/
 					box.chatbox("option", "boxManager").toggleBox();
@@ -207,11 +207,11 @@
 						{
                             $("#chat_div").chatbox("option", "boxManager").addMsg(id, msg);
 							setTimeout(
-	  							function() 
+	  							function()
 	  							{
 	   							 $("#chat_div").chatbox("option", "boxManager").addMsg("Guru", "The Guru is currently not available. Please allow up to an hour response time as Gurus are busy consulting with current students.");
 	  							}, 2000);
-                            
+
                         }
 					});
 				}
