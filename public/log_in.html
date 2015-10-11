@@ -122,10 +122,7 @@
 						url: "/login",
 						data: JSON.stringify(payload),
 						success: function( data ){
-							alert("Success");
-						},
-						error: function( err ){
-							alert("Failure");
+							location.href = "dashboard.html";
 						}
 					});
 
