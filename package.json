@@ -10,7 +10,8 @@
     "body-parser": "^1.13.1",
     "express": "^4.12.4",
     "inin": "^0.1.0",
-    "util": "^0.10.3"
+    "util": "^0.10.3",
+    "ibm_db": "^0.0.16"
   },
   "devDependencies": {
     "jscs": "^1.13.1",
