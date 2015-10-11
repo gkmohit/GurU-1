@@ -114,8 +114,9 @@ body > .container { height: auto; min-height: 100%; }
 }
 
 #dashboard {
-  background-color: #2B2B2B;
+  background-color: rgba(0,0,0,0.8);
   min-height: 800px;
+  height: 100%;
   
 }
 
@@ -231,6 +232,7 @@ p {
   width: 350px;
   margin-right: 20px;
   background-color: white;
+  margin:0 auto;
 }
 
 .well h1 {
