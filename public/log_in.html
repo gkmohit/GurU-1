@@ -96,7 +96,7 @@
 				<div class = "icon_container">
 					<a href="https://www.facebook.com/Gur-U-863704777070451/timeline/"><i class="fa fa-facebook-official fa-4"></i></a>
 					<a href="https://twitter.com/OnDemandGuru"><i class="fa fa-twitter-square"></a></i>
-					<i class="fa fa-instagram"></i>
+					<a href="https://instagram.com/guruondemand"><i class="fa fa-instagram"></i></a>
 				</div>
 			</div>
 		</div>
@@ -122,6 +122,7 @@
 						success: function( data ){
 							location.href = "dashboard.html";
 						}
+
 					});
 
 					// $.post("https://cd575a07.ngrok.io/login", {username : $("#email").val(), password : $("#password").val()}, function(data, status){
@@ -138,34 +139,7 @@
 				}
 				return false;
 			})
-			// $("#submit").click(function (){
-			// 	var payload = {
-			// 		email : $("#email").val(),
-   //        			full_name : $("#full_name").val(),
-   //        			password : $("#password").val()
-			// 	};
-   //      		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-   //      		if (regex.test(payload.email) && payload.full_name && payload.password) {
-			// 	  $.ajax({
-  	// 				method: "POST",
-  	// 				url: "sign_up",
-  	// 				contentType: "application/json",
-  	// 				data: JSON.stringify(payload),
-  	// 				success: function( data ) {
-			//               window.location = "index.html"
-			//         });
-			// 	}
-		 //        else if (regex.test(payload.email)) {
-		 //          $(".emptyFieldWarning").show();
-		 //          $(".invalidEmailWarning").hide();
-		 //        }
-		 //        else {
-		 //          $(".invalidEmailWarning").show();
-		 //          if (!(payload.full_name && payload.phone)) {
-		 //            $(".emptyFieldWarning").show();
-		 //          }
-	  //      		}
-	  //      	});
+
 		});
 
 

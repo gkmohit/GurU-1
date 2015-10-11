@@ -60,6 +60,7 @@ body > .container { height: auto; min-height: 100%; }
    letter-spacing: 3;
    color: white;
    height: 50px;
+   border-radius: 0px;
 }
 .navbar-default {
    background-color: transparent;
@@ -99,9 +100,23 @@ body > .container { height: auto; min-height: 100%; }
 }
 
 #subcontent {
-  background-color: white;
+  background-color: #606060;
   min-height: 600px;
   width: 100%;
+}
+
+#subcontent h1 {
+  color: white;
+}
+
+#subcontent p {
+  color: white;
+}
+
+#dashboard {
+  background-color: #2B2B2B;
+  min-height: 800px;
+  
 }
 
 .signup {
@@ -132,14 +147,16 @@ body > .container { height: auto; min-height: 100%; }
 }
 
 .circle {
-  left: 40%;
-  position: relative;
+  margin: 0 auto;
+  width: 250px; 
+  height: 250px;
   border-radius: 50%;
-  width: 150px;
-  height: 150px; 
-  margin: 35px;
-  /* width and height can be anything, as long as they're equal */
-  background-color: yellow;
+  background-repeat: no-repeat; 
+  background-position: center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
 }
 
 
@@ -186,6 +203,7 @@ body > .container { height: auto; min-height: 100%; }
   right: 40%;
   position: absolute;
   margin-bottom: 50px;
+  color:white;
 }
 
 .glyphicon.glyphicon-apple {
@@ -206,4 +224,24 @@ p {
 
 .icon_container {
   font-size: 50px;
+}
+
+.well {
+  height: 400px;
+  width: 350px;
+  margin-right: 20px;
+  background-color: white;
+}
+
+.well h1 {
+  font-weight: 500;
+}
+
+.wellcontainer {
+  position:relative;
+  top: 20px;
+}
+
+.mentee {
+  background-image: url("images/christina.jpg");
 }
